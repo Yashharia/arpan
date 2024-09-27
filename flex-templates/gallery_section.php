@@ -5,6 +5,7 @@ $heading = get_sub_field('heading');
 $text = get_sub_field('text');
 $cta = get_sub_field('cta');
 $style = get_sub_field('images_position_style');
+$type = get_sub_field('type');
 ?>
 <section class="gallery_section <?php echo $style ?>">
 
@@ -37,16 +38,37 @@ $style = get_sub_field('images_position_style');
 
         </div>
 
-        <?php if (have_rows('images')) : ?>
-            <div class="images-wrapper">
-                <?php $count = 1;
-                while (have_rows('images')) : the_row();
-                    $image = get_sub_field('image'); ?>
-                    <div class="item item-<?php echo $count ?>"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>"></div>
-                <?php $count++;
-                endwhile; ?>
-            </div>
-        <?php endif; ?>
+
+        <?php if ($type == "image"):
+            if (have_rows('images')) : ?>
+                <div class="images-wrapper ">
+                    <?php $count = 1;
+                    while (have_rows('images')) : the_row();
+                        $image = get_sub_field('image'); ?>
+                        <div class="item item-<?php echo $count ?>"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>"></div>
+                    <?php $count++;
+                    endwhile; ?>
+                </div>
+            <?php endif;
+        else:
+            if (have_rows('videos')) : ?>
+                <div class="images-wrapper type-video">
+                    <?php $count = 1;
+                    while (have_rows('videos')) : the_row();
+                        $image = get_sub_field('image');
+                        $youtube_iframe_url = get_sub_field('youtube_iframe_url');
+                    ?>
+                        <div class="item item-<?php echo $count ?>">
+                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+                            <a class="popup-youtube play-button" href="<?php echo $youtube_iframe_url; ?>">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/playbutton.svg" alt="">
+                            </a>
+                        </div>
+                    <?php $count++;
+                    endwhile; ?>
+                </div>
+        <?php endif;
+        endif; ?>
 
 
     </div>

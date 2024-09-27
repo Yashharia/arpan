@@ -842,7 +842,7 @@ hero-banner style start
 .hero-banner::before{content: url('../images/hero-right-side.svg'); right: 0; bottom: -150px; position: absolute; z-index: 0;}
 .hero-banner .item-slide .container{display: flex; max-width: 1366px;}
 .hero-banner .banner-content{width: 50%; padding-left: 60px; padding-top: 125px; }
-.banner-content p{font-family: 'Manrope', sans-serif;}
+.banner-content p{font-family: 'Manrope', sans-serif; max-width: 390px;}
 .hero-banner .cta-button{margin-top: 20px;}
 .hero-banner + .benefits {margin-top: -60px; z-index: -1;}
 
@@ -1101,6 +1101,7 @@ gallery section start
 .gallery_section .content-wrap .cta-wrapper {margin-top: 40px;}
 .gallery_section .images-wrapper{display: flex; gap: 40px; justify-content: center;}
 .gallery_section .images-wrapper img{border-radius: 25px;}
+.gallery_section .images-wrapper .item{position: relative;}
 
 .gallery_section.style-1 .images-wrapper .item-1{position: relative; top: -125px;}
 .gallery_section.style-1 .images-wrapper .item-2{position: relative; top: 70px;}
@@ -1110,6 +1111,22 @@ gallery section start
 .gallery_section.style-2 .images-wrapper .item-3{position: relative; top: 40px;}
 .gallery_section.style-2 .images-wrapper .item-4{position: relative; top: -60px;}
 
+.gallery_section .images-wrapper .play-button{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer;}
+.mfp-container.mfp-iframe-holder {
+	background:rgba(0, 0, 0, 0.5);
+}
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
 /*-------------------------------------------------
 
 gallery section end

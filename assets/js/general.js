@@ -399,66 +399,19 @@ jQuery(document).ready(function () {
 
   // Hide all content sections initially
 
-  if ($(window).width() > 768) {
-    $(".js-job-list-card:first-child")
-      .addClass("active")
-      .find(".card-body")
-      .show();
-  }
-  $(".job-list-wrap").on("click", ".js-job-list-card", function () {
-    if ($(window).width() > 767) {
-      $(this).toggleClass("active").find(".card-body").slideToggle();
-
-      $(".card-body").not($(this).find(".card-body")).slideUp();
-
-      $(this).siblings().removeClass("active");
-    } else {
-      $(".card-body").not($(this).find(".card-body")).show();
-    }
-  });
+  
 
   //faq accordion
 
-  $(".accordion-item:first-child .js-accordion-heading")
-    .addClass("is-active")
-    .next()
-    .addClass("show")
-    .show();
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
 
-  $(".js-accordion-heading").click(function (e) {
-    e.preventDefault();
+		fixedContentPos: false
+	});
 
-    let $this = $(this);
-
-    if ($this.next().hasClass("show")) {
-      $this.removeClass("is-active");
-      $this.next().removeClass("show");
-
-      $this.next().slideUp(350);
-    } else {
-      $this.parent().parent().find(".accordion-content").removeClass("show");
-      $this.parent().parent().find(".accordion-content").slideUp(350);
-      $this
-        .parent()
-        .parent()
-        .find(".accordion-heading")
-        .removeClass("is-active");
-      $this.toggleClass("is-active");
-      $this.next().toggleClass("show");
-      $this.next().slideToggle(350);
-    }
-  });
-
-  /*download popup start*/
-
-  $(document).on("click", ".popup-link", function () {
-    $(this)
-      .magnificPopup({
-        type: "inline",
-        midClick: true,
-      })
-      .magnificPopup("open");
-  });
-
-  /*download popup end*/
+  
 }); /* ready end */
