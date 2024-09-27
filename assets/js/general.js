@@ -256,50 +256,6 @@ jQuery(document).ready(function () {
   }
   /*timelines-slider script end*/
 
-  /*timelines-slider script start*/
-
-  if ($(".js-employee-benefits-slider").length > 0) {
-    $(".js-employee-benefits-slider").slick({
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      // autoplay: true,
-      autoplaySpeed: 2000,
-      // dots: true,
-      arrows: true,
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-
-    if (!($(".js-employee-benefits-slider .slick-slide").length > 1)) {
-      // remove arrows
-      $(".js-employee-benefits-slider .slick-dots").hide();
-      $(".js-employee-benefits-slider").addClass("single-slide");
-    }
-  }
-
-  /*timelines-slider script end*/
-
   $(window).on("load resize", function () {
     // menuMobile(1199);
     if ($(".sub-menu-heading").length > 0) {

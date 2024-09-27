@@ -8,12 +8,15 @@ $buttons = get_sub_field('buttons');
     <div class="container">
 
         <div class="content-wrap text-center">
-            <?php if (!empty($sub_heading)) : ?>
-                <p class="sub-heading"><?php echo $sub_heading ?></p>
-            <?php endif; ?>
-            <?php if (!empty($heading)) : ?>
-                <h2 class="h1"><?php echo $heading ?></h2>
-            <?php endif; ?>
+
+            <div class="text-wrapper">
+                <?php if (!empty($sub_heading)) : ?>
+                    <p class="sub-heading"><?php echo $sub_heading ?></p>
+                <?php endif; ?>
+                <?php if (!empty($heading)) : ?>
+                    <h2 class="h1"><?php echo $heading ?></h2>
+                <?php endif; ?>
+            </div>
 
             <?php if (have_rows('buttons')) : ?>
                 <div class="signposts-list">

@@ -39,7 +39,7 @@ $header_logo = get_field($logo, 'option');
                     <!-- header logo end -->
 
                     <?php if (!(isset($is_hide_mywbr_button) && $is_hide_mywbr_button == 'yes') && !empty($cta)) { ?>
-                        <a href="<?php echo $cta['url'] ?>" <?php echo ($cta['target']) ? 'target="_blank"' : ""; ?> class="cta-button" title="<?php echo $cta['title'] ?>"><?php echo $cta['title'] ?></a>
+                        <a href="<?php echo $cta['url'] ?>" <?php echo ($cta['target']) ? 'target="_blank"' : ""; ?> class="cta-button mobile-menu-cta" title="<?php echo $cta['title'] ?>"><?php echo $cta['title'] ?></a>
                     <?php } ?>
 
                     <!-- handburger trigger start -->

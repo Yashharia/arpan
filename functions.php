@@ -16,6 +16,13 @@ if (!function_exists('theme_setup')) :
 		register_nav_menus(
 			array(
 				'primary-menu' => esc_html__('Primary', 'theme'),
+				'footer-1-menu' => esc_html__('Footer 1', 'theme'),
+				'footer-2-menu' => esc_html__('Footer 2', 'theme'),
+				'footer-3-menu' => esc_html__('Footer 3', 'theme'),
+				'footer-4-menu' => esc_html__('Footer 4', 'theme'),
+				'footer-5-menu' => esc_html__('Footer 5', 'theme'),
+				'footer-6-menu' => esc_html__('Footer 6', 'theme'),
+				'footer-7-menu' => esc_html__('Footer 7', 'theme'),
 			)
 		);
 
@@ -87,20 +94,9 @@ add_action('wp_enqueue_scripts', 'wp_theme_enqueues');
 require get_template_directory() . '/inc/wp-admin-page.php';
 require get_template_directory() . '/inc/acf-settings.php';
 
-/* ACF Options Page */
-if (function_exists('acf_add_options_page')) {
-	acf_add_options_page(array(
-		'page_title' => __('Theme General Settings', 'theme_slug'),
-		'menu_title' => __('Theme Options', 'theme_slug'),
-		'menu_slug' => 'theme-general-settings',
-		'capability' => 'edit_posts',
-		'redirect' => false,
-		'icon_url' => ' dashicons-art',
-		'position' => 100,
-	));
-}
+
 
 //Change ACF Local JSON save location to /acf folder inside this plugin
-add_filter('acf/settings/save_json', function() {
+add_filter('acf/settings/save_json', function () {
 	return dirname(__FILE__) . '/acf-json';
 });
