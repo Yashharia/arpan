@@ -296,9 +296,10 @@ form textarea{
 
 @media(max-width:767px){
 
+    h1, .h1{font-size: 25px; line-height: 35px;}
 
-
-    h1, .h1, h2, .h2{ font-size: 25px; line-height: 35px; }
+ h2, .h2{  font-size: 20px; line-height: 27px;}
+ .sub-heading{font-size: 9px; margin-bottom: 10px;}
 
 }
 
@@ -537,7 +538,9 @@ table th { padding-top: 12px; padding-bottom: 12px; text-align: left; background
   .container{ max-width: 1080px; }
 
 }
-
+@media (max-width: 991px){
+    .container{padding: 0 30px;}
+}
 
 
 /*custom grid start*/
@@ -602,7 +605,10 @@ table th { padding-top: 12px; padding-bottom: 12px; text-align: left; background
 
 .slick-dots li.slick-active{ opacity: 1;}
 
+@media (max-width:991px) {
+    .slick-dots{max-width: 100%; bottom: -35px;}
 
+}
 
 /* popup default */
 
@@ -1148,7 +1154,7 @@ about us hero section start
 .about_us_hero .images-wrapper{display: flex; justify-content: center; max-width: 1110px;}
 .about_us_hero .images-wrapper img{border-radius: 25px;}
 .about_us_hero .images-wrapper {margin: 0 auto;}
-.about_us_hero .images-wrapper .item{width: 25%; margin: 0 10px; position: relative; overflow: hidden; border-radius: 40px;}
+.about_us_hero .images-wrapper .item{width: 25%; margin: 0 10px 10px; position: relative; overflow: hidden; border-radius: 40px;}
 .about_us_hero .images-wrapper .item .sub-text{padding: 120px 38px 34px 22px; background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0,0,0,0) 100%); position: absolute; bottom: 0; left: 0; color: white; font-size: 20px; line-height: 21.2px;}
 
 @media (max-width: 991px) {
@@ -1176,6 +1182,11 @@ about_us_icon_cards start
 .grid-item:nth-child(1) .card-benefits,.grid-item:nth-child(3n) .card-benefits{background-color: rgba(231, 241, 242, 1);}
 .grid-item:nth-child(2) .card-benefits, .grid-item:nth-child(7n) .card-benefits{background: rgba(228, 239, 228, 1);}
 
+@media (max-width: 991px) {
+    .grid-item { width:50%; padding: 7px}
+    .grid-item .card-benefits{padding: 20px 16px }
+
+}
 /*-------------------------------------------------
 
 about_us_icon_cards end
@@ -1192,7 +1203,14 @@ left_image_right_text section start
 .left_image_right_text .row-wrap{gap: 60px; display: flex; flex-wrap: nowrap;}
 .left_image_right_text .row-wrap .image-wrapper{max-width: 359px; width: 30%;}
 .left_image_right_text .row-wrap .text-wrapper{flex-grow: 1; width: 70%;}
+@media (max-width: 991px) {
+    .left_image_right_text{padding: 50px 0px;}
+    .left_image_right_text .row-wrap{display: block; padding: 0 15px;}
+    .left_image_right_text .row-wrap .image-wrapper, .left_image_right_text .row-wrap .text-wrapper{width: 100%;}
+    .left_image_right_text .row-wrap .image-wrapper{margin-bottom: 40px;}
+    .left_image_right_text::before{content: url("../images/methodology-mobile.svg"); position: absolute;left: 0; top: -17px;}
 
+}
 /*-------------------------------------------------
 
 left_image_right_text section end
@@ -1428,12 +1446,14 @@ site-footer style start
 
 @media(max-width:991px){
 
-    .site-footer{padding: 40px 15px;}
+    .site-footer{padding: 40px 0;}
 
     .site-footer .footer-logo{display: flex;justify-content: center;margin-bottom: 20px;}
 
     .site-footer .top-content .action-content{text-align: center;justify-content: center; flex-direction: row-reverse;}
-
+    .site-footer .top-content{flex-direction: column;}
+    .footer-menu-wrapper, .site-footer .footer-logo{margin: 0;}
+    .footer-menu-wrapper{flex-wrap: wrap;}
 }
 
 
@@ -1611,7 +1631,7 @@ team slider style start
 
 -------------------------------------------------*/
 .team_slider{padding: 99px 0; background:rgba(248, 238, 245, 1); overflow: hidden; position: relative;}
-.team_slider .container{max-width: 1110px;}
+.team_slider .container{max-width: 1110px; }
 .team_slider .inner-wrap{display: flex; justify-content: space-between;}
 .team_slider .section-heading {margin-bottom: 60px; width: 100%;}
 .team_slider .section-heading .sub-heading{margin-bottom: 10px; }
@@ -1628,6 +1648,21 @@ team slider style start
 .js-team-slider .details-wrapper .designation{ font-size: 14px;}
 .js-team-slider .details-wrapper .social-icons{ display: flex; gap: 33px; justify-content: center; margin-top: 10px; align-items: flex-end; }
 .js-team-slider .details-wrapper .social-icons img{max-height: 19px;}
+
+@media(max-width:991px){
+    .team_slider{padding: 57px 0 85px;}
+    .team_slider .row-wrap{margin-left: 0;}
+    .js-team-slider .slick-track{gap: 15px;}
+    .js-team-slider .slider-card{width: 180px;}
+    .js-team-slider .details-wrapper{padding: 18px;}
+    .js-team-slider .details-wrapper .name{font-size: 14px; margin-bottom: 5px; line-height: normal;}
+    .js-team-slider .details-wrapper .designation{font-size: 10px;}
+    .team_slider .section-heading{margin-bottom: 30px;}
+    .js-team-slider .details-wrapper .social-icons{gap: 20px;}
+    .js-team-slider .details-wrapper .social-icons img{max-height: 12px;}
+    .team_slider .container.slider-container{padding: 0; margin-left: 0;}
+}
+
 /*-------------------------------------------------
 
 team slider style end
@@ -1653,6 +1688,10 @@ partners slider style start
 .js-partners-slider .slick-track{ display: flex;gap: 40px;}
 .js-partners-slider .slider-card .link-wrapper{position: absolute; font-size: 40px; line-height: 42.4px; color: var(--color-white); font-weight: 300; left: 0; top: 0; width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 41px 47px;}
 .js-partners-slider .item{position: relative;}
+
+@media(max-width:991px){
+    .partners_slider{padding: 52px 0px 30px;}
+}
 
 /*-------------------------------------------------
 
