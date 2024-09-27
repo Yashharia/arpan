@@ -3,7 +3,10 @@
 $footer_scripts = get_field('footer_scripts', 'option');
 $footer_links = get_field('footer_links', 'option');
 $copyright = get_field('copyright', 'option');
+$call_icon = get_field('call_icon', 'option');
+$call_icon_link = get_field('call_icon_link', 'option');
 $social_icons = get_field('social_icons', 'option');
+$social_icons_heading = get_field('social_icons_heading', 'option');
 $logo = (get_field('logo')) ? get_field('logo') . '_footer_logo' : 'wbr_group_footer_logo';
 $footer_logo = get_field($logo, 'option');
 
@@ -54,10 +57,15 @@ function get_footer_menu($menu_name)
                 <div>
                     <?php get_footer_menu('footer-6-menu'); ?>
                     <?php get_footer_menu('footer-7-menu'); ?>
+                    <?php if (!empty($call_icon) && !empty($call_icon_link)): ?>
+                        <a href="<?php echo $call_icon_link['url'] ?>" <?php echo ($call_icon_link['target']) ? 'target="_blank"' : ""; ?>><img src="<?php echo $call_icon['url'] ?>" alt="call"></a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="social-media">
-                <?php echo $footer_links ?>
+                <?php if (!empty($social_icons_heading)): ?>
+                    <p class="menu-heading"><b><?php echo $social_icons_heading ?></b></p>
+                <?php endif; ?>
                 <?php if ($social_icons) : ?>
                     <div class="social-links">
                         <?php foreach ($social_icons as $row) {

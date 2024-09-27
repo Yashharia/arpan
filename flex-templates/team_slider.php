@@ -41,10 +41,18 @@ $cta = get_sub_field('cta');
                                 <h4 class="name"><?php echo $name ?></h4>
                                 <p class="designation"><?php echo $designation ?></p>
                                 <div class="social-icons">
-                                    <a href="<?php echo $facebook ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/facebook.svg" alt="facebook icon"></a>
-                                    <a href="<?php echo $twitter ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/twitter.svg" alt="twitter icon"></a>
-                                    <a href="<?php echo $instagram ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/instagram.svg" alt="instagram icon"></a>
-                                    <a href="<?php echo $linkedin ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/linkedin.svg" alt="linkedin icon"></a>
+                                    <?php if (!empty($facebook)): ?>
+                                        <a href="<?php echo $facebook ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/facebook.svg" alt="facebook icon"></a>
+                                    <?php endif; ?>
+                                    <?php if (!empty($twitter)): ?>
+                                        <a href="<?php echo $twitter ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/twitter.svg" alt="twitter icon"></a>
+                                    <?php endif; ?>
+                                    <?php if (!empty($instagram)): ?>
+                                        <a href="<?php echo $instagram ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/instagram.svg" alt="instagram icon"></a>
+                                    <?php endif; ?>
+                                    <?php if (!empty($linkedin)): ?>
+                                        <a href="<?php echo $linkedin ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/linkedin.svg" alt="linkedin icon"></a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

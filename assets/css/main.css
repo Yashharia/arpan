@@ -1421,6 +1421,7 @@ site-footer style start
 
 .site-footer .footer-logo{max-width: 180px; margin-right: 60px;}
 .social-media{max-width: 150px;}
+.social-media .menu-heading{margin-bottom: 10px;}
 .social-links{display: flex; gap: 13px; flex-wrap: wrap;}
 .site-footer .copyright{font-size: 14px;}
 .site-footer .terms-links{display: flex; gap: 54px; font-size: 14px;}
