@@ -41,10 +41,10 @@ $cta = get_sub_field('cta');
                                 <h4 class="name"><?php echo $name ?></h4>
                                 <p class="designation"><?php echo $designation ?></p>
                                 <div class="social-icons">
-                                    <a href="<?php echo $facebook ?>"><i class="fa fa-facebook"></i></a>
-                                    <a href="<?php echo $twitter ?>"><i class="fa fa-twitter"></i></a>
-                                    <a href="<?php echo $instagram ?>"><i class="fa fa-instagram"></i></a>
-                                    <a href="<?php echo $linkedin ?>"><i class="fa fa-linkedin"></i></a>
+                                    <a href="<?php echo $facebook ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/facebook.svg" alt="facebook icon"></a>
+                                    <a href="<?php echo $twitter ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/twitter.svg" alt="twitter icon"></a>
+                                    <a href="<?php echo $instagram ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/instagram.svg" alt="instagram icon"></a>
+                                    <a href="<?php echo $linkedin ?>" target="_blank"><img src="<?php echo get_template_directory_uri(  ) ?>/assets/images/linkedin.svg" alt="linkedin icon"></a>
                                 </div>
                             </div>
                         </div>

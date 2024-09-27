@@ -215,6 +215,8 @@ jQuery(document).ready(function () {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplaySpeed: 2000,
+      dots: true,
+
     });
   }
 
@@ -238,6 +240,7 @@ jQuery(document).ready(function () {
       autoplay: true,
       autoplaySpeed: 2000,
       variableWidth: true,
+      dots: true,
     });
   }
 

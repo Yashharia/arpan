@@ -1142,7 +1142,8 @@ about_us_icon_cards start
 -------------------------------------------------*/
 
 .about_us_icon_cards{padding: 88px 0 92px;}
-.masonry{margin: 0 -20px;}
+.masonry{margin: 0 -20px; position: relative;}
+.masonry::after{content: url("../images/about\ us\ icon\ cards.svg"); position: absolute; bottom: 0; right: 0; display: block;}
 .grid-item { width: 25%;   padding: 13px 10px }
 .grid-item .card-benefits{background: transparent; padding: 34px 32px 41px; background: rgba(245, 245, 247, 1); border-radius: 40px;}
 .grid-item:nth-child(1) .card-benefits,.grid-item:nth-child(3n) .card-benefits{background-color: rgba(231, 241, 242, 1);}
@@ -1546,10 +1547,7 @@ article-section style start
 .slider_section .section-heading {margin-bottom: 60px; width: 100%;}
 .slider_section .section-heading .sub-heading{margin-bottom: 0px; }
 .slider_section .section-heading h3{color: var(--color-black);margin-bottom: 0; }
-.js-right-slider{width: 100%; position: relative;}
-.js-right-slider .slick-dots{width: 100%; margin: 0; position: absolute; bottom: -55px; left: 0; gap: 0; display: flex; align-items: center; padding: 0;}
-.js-right-slider .slick-dots li{flex: 1; background-color: var(--color-black); border-radius: 0; height: 2px;}
-.js-right-slider .slick-dots li.slick-active{height: 4px;}
+
 .slider_section .container.slider-container{position: relative; margin-left: -20px;}
 .slider_section .container.slider-container:before{content: ""; background: rgba(254, 244, 229, 1); position: absolute; right: 100%; width: 300%; height: 100%; z-index: 2;}
 .js-right-slider .slick-list{overflow: visible;}
@@ -1561,19 +1559,22 @@ article-section style start
 article-section style end
 
 -------------------------------------------------*/
-
-
+.slick-slider{width: 100%; position: relative;}
+.slick-dots{width: 100%; margin: 0; position: absolute; bottom: -55px; left: 0; gap: 0; display: flex; align-items: center; padding: 0;}
+.slick-dots li{flex: 1; background-color: var(--color-black); border-radius: 0; height: 2px;}
+.slick-dots li.slick-active{height: 4px;}
 
 /*-------------------------------------------------
 
 team slider style start
 
 -------------------------------------------------*/
-.team_slider{padding: 99px 0; background:rgba(248, 238, 245, 1); overflow: hidden;}
+.team_slider{padding: 99px 0; background:rgba(248, 238, 245, 1); overflow: hidden; position: relative;}
+.team_slider::after{content: url("../images/teams.svg"); position: absolute; top: -65px; right: 0; display: block; }
 .team_slider .container{max-width: 1110px;}
 .team_slider .inner-wrap{display: flex; justify-content: space-between;}
 .team_slider .section-heading {margin-bottom: 60px; width: 100%;}
-.team_slider .section-heading .sub-heading{margin-bottom: 0px; }
+.team_slider .section-heading .sub-heading{margin-bottom: 10px; }
 .team_slider .section-heading h3{color: var(--color-black);margin-bottom: 0; }
 .js-team-slider{width: 100%;}
 .team_slider .container.slider-container{position: relative; margin-left: -20px;}
@@ -1585,6 +1586,8 @@ team slider style start
 .js-team-slider .details-wrapper{position: absolute; bottom: 0; left: 0; padding: 25px; text-align: center;  width: 100%; color: #fff;}
 .js-team-slider .details-wrapper .name{text-transform: uppercase; font-weight: 800; font-size: 24px;}
 .js-team-slider .details-wrapper .designation{ font-size: 14px;}
+.js-team-slider .details-wrapper .social-icons{ display: flex; gap: 33px; justify-content: center; margin-top: 10px; align-items: flex-end; }
+.js-team-slider .details-wrapper .social-icons img{max-height: 19px;}
 /*-------------------------------------------------
 
 team slider style end
@@ -1596,7 +1599,9 @@ team slider style end
 partners slider style start
 
 -------------------------------------------------*/
-.partners_slider{padding: 70px 0 75px; overflow: hidden;}
+.partners_slider{padding: 70px 0 75px; overflow: hidden; position: relative;}
+.partners_slider::before{content: url("../images/partners.svg"); position: absolute; top: -140px; left: 0; display: block; z-index: 2; }
+
 .partners_slider .container{max-width: 1110px;}
 .partners_slider .inner-wrap{display: flex; justify-content: space-between;}
 .partners_slider .section-heading {padding-bottom: 42px; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.23);}

@@ -99,3 +99,8 @@ if (function_exists('acf_add_options_page')) {
 		'position' => 100,
 	));
 }
+
+//Change ACF Local JSON save location to /acf folder inside this plugin
+add_filter('acf/settings/save_json', function() {
+	return dirname(__FILE__) . '/acf-json';
+});
