@@ -9,6 +9,8 @@ $social_icons = get_field('social_icons', 'option');
 $social_icons_heading = get_field('social_icons_heading', 'option');
 $logo = (get_field('logo')) ? get_field('logo') . '_footer_logo' : 'wbr_group_footer_logo';
 $footer_logo = get_field($logo, 'option');
+$cta = get_field('cta', 'option');
+
 
 function get_footer_menu($menu_name)
 {
@@ -33,33 +35,50 @@ function get_footer_menu($menu_name)
                 <a href="<?php echo site_url('/'); ?>" title="wbr logo">
                     <img src="<?php echo $footer_logo['url'] ?>" alt="<?php echo $footer_logo['alt'] ?>">
                 </a>
+                <?php if (!(isset($is_hide_mywbr_button) && $is_hide_mywbr_button == 'yes') && !empty($cta)) { ?>
+                    <a href="<?php echo $cta['url'] ?>" <?php echo ($cta['target']) ? 'target="_blank"' : ""; ?> class="cta-button footer-cta-button" title="<?php echo $cta['title'] ?>"><?php echo $cta['title'] ?></a>
+                <?php } ?>
             </div>
             <div class="footer-menu-wrapper">
-                <div>
-                    <?php
-
-                    get_footer_menu('footer-1-menu');
-                    get_footer_menu('footer-2-menu');
-
-                    ?>
+                <div class="footer-col-1">
+                    <div class="menu-wrapper">
+                        <?php get_footer_menu('footer-1-menu'); ?>
+                    </div>
+                    <div class="menu-wrapper">
+                        <?php get_footer_menu('footer-2-menu'); ?>
+                    </div>
                 </div>
-                <div>
-                    <?php get_footer_menu('footer-3-menu'); ?>
+                <div class="footer-col-1">
+                    <div class="menu-wrapper">
+
+                        <?php get_footer_menu('footer-3-menu'); ?>
+                    </div>
                 </div>
-                <div>
-                    <?php get_footer_menu('footer-4-menu'); ?>
+                <div class="footer-col-2">
+                    <div class="menu-wrapper">
+
+                        <?php get_footer_menu('footer-4-menu'); ?>
+                    </div>
 
                 </div>
-                <div>
-                    <?php get_footer_menu('footer-5-menu'); ?>
+                <div class="footer-col-3">
+                    <div class="menu-wrapper">
+
+                        <?php get_footer_menu('footer-5-menu'); ?>
+                    </div>
 
                 </div>
-                <div>
-                    <?php get_footer_menu('footer-6-menu'); ?>
-                    <?php get_footer_menu('footer-7-menu'); ?>
-                    <?php if (!empty($call_icon) && !empty($call_icon_link)): ?>
-                        <a href="<?php echo $call_icon_link['url'] ?>" <?php echo ($call_icon_link['target']) ? 'target="_blank"' : ""; ?>><img src="<?php echo $call_icon['url'] ?>" alt="call"></a>
-                    <?php endif; ?>
+                <div class="footer-col-4">
+                    <div class="menu-wrapper">
+                        <?php get_footer_menu('footer-6-menu'); ?>
+                    </div>
+                    <div class="menu-wrapper">
+                        <?php get_footer_menu('footer-7-menu'); ?>
+                        <?php if (!empty($call_icon) && !empty($call_icon_link)): ?>
+                            <a href="<?php echo $call_icon_link['url'] ?>" <?php echo ($call_icon_link['target']) ? 'target="_blank"' : ""; ?>><img src="<?php echo $call_icon['url'] ?>" alt="call"></a>
+                        <?php endif; ?>
+                    </div>
+
                 </div>
             </div>
             <div class="social-media">
