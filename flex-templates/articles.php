@@ -48,7 +48,7 @@ endif; ?>
 
                         <?php 
                         if (!empty($posts)) : ?>
-                            <div class="article-list">
+                            <div class="article-list js-article-list">
                                 <?php foreach ($posts as $single_id) :
                                     get_template_part('flex-templates/template-parts/card', 'article', array('id' => $single_id));
                                 endforeach; ?>

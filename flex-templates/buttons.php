@@ -9,7 +9,7 @@ $buttons = get_sub_field('buttons');
 
         <div class="content-wrap text-center">
 
-            <div class="text-wrapper">
+            <div class="content text-wrapper">
                 <?php if (!empty($sub_heading)) : ?>
                     <p class="sub-heading"><?php echo $sub_heading ?></p>
                 <?php endif; ?>

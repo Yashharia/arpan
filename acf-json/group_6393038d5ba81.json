@@ -209,6 +209,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66f6d23cd454e": {
+                    "key": "layout_66f6d23cd454e",
+                    "name": "programs_hero",
+                    "label": "Programs hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66f6d246d4551",
+                            "label": "Programs hero",
+                            "name": "programs_hero",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_66f6d1c415452"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66f234bdbb7b1": {
                     "key": "layout_66f234bdbb7b1",
                     "name": "slider_section",
@@ -1171,5 +1203,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727423650
+    "modified": 1727451731
 }

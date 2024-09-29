@@ -160,6 +160,38 @@
         $slider.slick("unslick");
       }
     }
+
+    var $slider = $(".js-gallery-slider"); // Replace with your slider's class or ID
+    if ($(window).width() < 991) {
+      if (!$slider.hasClass("slick-initialized")) {
+        $slider.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          dots: false,
+        });
+      }
+    } else {
+      if ($slider.hasClass("slick-initialized")) {
+        $slider.slick("unslick");
+      }
+    }
+
+    var $slider = $(".js-article-list"); // Replace with your slider's class or ID
+    if ($(window).width() < 991) {
+      if (!$slider.hasClass("slick-initialized")) {
+        $slider.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          dots: false,
+        });
+      }
+    } else {
+      if ($slider.hasClass("slick-initialized")) {
+        $slider.slick("unslick");
+      }
+    }
   }
 
   // Initial check

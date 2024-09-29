@@ -41,7 +41,7 @@ $type = get_sub_field('type');
 
         <?php if ($type == "image"):
             if (have_rows('images')) : ?>
-                <div class="images-wrapper ">
+                <div class="images-wrapper js-gallery-slider">
                     <?php $count = 1;
                     while (have_rows('images')) : the_row();
                         $image = get_sub_field('image'); ?>
@@ -52,7 +52,7 @@ $type = get_sub_field('type');
             <?php endif;
         else:
             if (have_rows('videos')) : ?>
-                <div class="images-wrapper type-video">
+                <div class="images-wrapper type-video js-gallery-slider">
                     <?php $count = 1;
                     while (have_rows('videos')) : the_row();
                         $image = get_sub_field('image');

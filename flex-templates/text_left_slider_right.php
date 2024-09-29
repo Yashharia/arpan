@@ -19,7 +19,7 @@ $cta = get_sub_field('cta');
                     <h2><?php echo $heading; ?></h2>
                 <?php endif; ?>
                 <?php if (!empty($text)) : ?>
-                    <p><?php echo $text; ?></p>
+                    <?php echo $text; ?>
                 <?php endif; ?>
                 <?php if (!empty($cta)): ?>
                     <div class="cta-wrapper">

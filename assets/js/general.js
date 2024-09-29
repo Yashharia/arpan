@@ -61,7 +61,7 @@ jQuery(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplaySpeed: 5000,
-      autoplay: true,
+      // autoplay: true,
       //   adaptiveHeight: true,
       dots: false,
       arrows: false,
@@ -216,7 +216,14 @@ jQuery(document).ready(function () {
       slidesToScroll: 1,
       autoplaySpeed: 2000,
       dots: true,
-
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: true,
+          },
+        },
+      ],
     });
   }
 
@@ -229,8 +236,30 @@ jQuery(document).ready(function () {
       autoplaySpeed: 2000,
       variableWidth: true,
       dots: true,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: "unslick",
+        },
+      ],
     });
   }
+
+  // if ($(".js-gallery-slider").length > 0) {
+  //   $(".js-gallery-slider").slick({
+  //     infinite: false,
+  //     slidesToShow: 4,
+  //     slidesToScroll: 1,
+  //     responsive: [
+  //       {
+  //         breakpoint: 767,
+  //         settings: {
+  //           variableWidth: true,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }
 
   if ($(".js-team-slider").length > 0) {
     $(".js-team-slider").slick({
@@ -399,19 +428,15 @@ jQuery(document).ready(function () {
 
   // Hide all content sections initially
 
-  
-
   //faq accordion
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+  $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
+    disableOn: 700,
+    type: "iframe",
+    mainClass: "mfp-fade",
+    removalDelay: 160,
+    preloader: false,
 
-		fixedContentPos: false
-	});
-
-  
+    fixedContentPos: false,
+  });
 }); /* ready end */
