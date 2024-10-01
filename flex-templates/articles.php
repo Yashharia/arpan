@@ -1,7 +1,6 @@
 <?php
 $sub_heading = get_sub_field('sub_heading');
 $heading = get_sub_field('heading');
-$cta = get_sub_field('cta');
 $auto = get_sub_field('auto');
 $posts = get_sub_field('posts');
 if ($auto) :
@@ -29,7 +28,7 @@ endif; ?>
                 <div class="articles-section">
                     <div class="container">
                         <?php if (!empty($heading)) : ?>
-                            <div class="section-heading">
+                            <div class="section-heading text-center">
                                 <div class="inner-wrap">
                                     <div class="text-wrapper">
                                         <?php if (!empty($sub_heading)): ?>
@@ -37,11 +36,7 @@ endif; ?>
                                         <?php endif; ?>
                                         <h3 class="h1"><?php echo $heading ?></h3>
                                     </div>
-                                    <?php if (!empty($cta)): ?>
-                                        <div class="cta-wrapper">
-                                            <a href="<?php echo $cta['url'] ?>" <?php echo ($cta['target']) ? 'target="_blank"' : ""; ?> class="cta-button" title="<?php echo $cta['title'] ?>"><?php echo $cta['title'] ?></a>
-                                        </div>
-                                    <?php endif; ?>
+                                   
                                 </div>
                             </div>
                         <?php endif; ?>

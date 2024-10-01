@@ -14,7 +14,7 @@ $buttons = get_sub_field('buttons');
                     <p class="sub-heading"><?php echo $sub_heading ?></p>
                 <?php endif; ?>
                 <?php if (!empty($heading)) : ?>
-                    <h2 class="h1"><?php echo $heading ?></h2>
+                    <h3 class="section-heading"><?php echo $heading ?></h3>
                 <?php endif; ?>
             </div>
 
