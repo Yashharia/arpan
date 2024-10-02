@@ -386,6 +386,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66fcb49483f13": {
+                    "key": "layout_66fcb49483f13",
+                    "name": "programs_list",
+                    "label": "Programs list",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66fcb4b583f16",
+                            "label": "Programs list",
+                            "name": "programs_list",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_66f7e38dbeb01"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66f268f5f036b": {
                     "key": "layout_66f268f5f036b",
                     "name": "partners_slider",
@@ -751,7 +783,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "program"
             }
         ]
     ],
@@ -764,5 +796,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727771780
+    "modified": 1727842559
 }

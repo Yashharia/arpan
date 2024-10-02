@@ -49,7 +49,7 @@
             "label": "Programs",
             "name": "programs",
             "aria-label": "",
-            "type": "post_object",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -69,14 +69,19 @@
             "post_type": [
                 "program"
             ],
-            "post_status": "",
+            "post_status": [
+                "publish"
+            ],
             "taxonomy": "",
+            "filters": [
+                "search"
+            ],
             "return_format": "id",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 1,
+            "elements": "",
             "bidirectional": 0,
-            "ui": 1,
             "bidirectional_target": []
         }
     ],
@@ -98,5 +103,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727758566
+    "modified": 1727842188
 }
