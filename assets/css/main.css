@@ -1295,7 +1295,7 @@ alternate-image-content section style start
     .alternate-image-content{padding: 40px 0;}
     .alternate-image-content.style-1 .alternate-image-content-wrap {text-align: center;}
     .alternate-image-content-wrap .image-wrap img{border-radius: 20px;}
-
+    .alternate-image-content.style-2 .container{padding: 18px 0 34px;}
 }
 
 /*-------------------------------------------------
