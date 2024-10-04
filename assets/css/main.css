@@ -218,7 +218,7 @@ form textarea{
 
     outline: none;
 
-    font-size: 20px;
+    font-size: 14px;
 
     font-weight: normal;
 
@@ -226,19 +226,22 @@ form textarea{
 
     line-height: 28px;
 
-    height: 64px;
+    height: 50px;
 
-    padding: 21px 25px;
+    padding: 16px 20px;
 
     border-radius: 10px;
 
-    border: 1px solid var(--color-white) ;
+    border: 1px solid rgba(180, 180, 180, 1) ;
 
     width: 100%;
 
     resize: none;
+    margin-bottom: 20px;
 
 }
+
+form input[type="submit"]{width: 100%; background: var(--color-black); border-radius: 10px; border-color: var(--color-black); }
 
 form textarea{
 
@@ -264,15 +267,15 @@ form textarea{
 
     form textarea{
 
-        height: 54px;
+        height: 38px;
 
-        font-size: 18px;
+        font-size: 12px;
 
-        line-height: 28px;
+        line-height: 13px;
 
-        border-radius: 5px;
+        border-radius: 8px;
 
-        padding: 15px 20px;
+        padding: 11px 14px;
 
     }
 
@@ -1428,7 +1431,41 @@ download cta end
 -------------------------------------------------*/
 
 
+/*-------------------------------------------------
 
+contact_section start
+-------------------------------------------------*/
+.contact_section{padding: 55px 0 100px;}
+.contact-item {margin-bottom: 17px;}
+.contact-item .row-wrap{flex-wrap: nowrap;}
+.contact-item .icon{margin-right: 20px; min-width: 19px;}
+.contact-item p{font-family: var(--Manrope);}
+.contact_section .form-parent-wrap{position: relative;}
+.contact_section .contact-list-wrap{margin-bottom: 60px;}
+.contact_section .contact-list-wrap .contact-list{position: relative;}
+.contact_section .contact-list-wrap .contact-list::after{content: url("../images/contact_section_bg.svg"); position: absolute; right: -150px; top: -75px; z-index: 0;}
+.contact_section .form-wrapper{background: var(--color-purple); padding: 36px 40px 0; border-radius: 40px; position: absolute; z-index: 3;}
+.contact_section .form-wrapper textarea{margin-bottom: 0;}
+.contact_section .iframe-wrapper {position: relative; border-radius: 80px; overflow: hidden;}
+.contact_section .iframe-wrapper .cta-button{position: absolute; border-radius: 10px; background: var(--color-black); border-color: var(--color-black); z-index: 2; top: 64px; left: 72px;}
+.contact_section .iframe-wrapper iframe{width: 100%; height: 515px;}
+.contact_section .iframe-wrapper::after{content: ""; width: 100%; height: 100%; position: absolute;top: 0; left: 0; z-index: 1; background: var(--color-black); opacity: 0.2; pointer-events: none;}
+
+@media(max-width:767px){
+    .contact_section{padding: 32px 0 30px;}
+    .contact_section .form-wrapper{padding: 26px 14px; position: relative;}
+    .contact_section .contact-list-wrap{margin-bottom: 25px;}
+    .contact_section .contact-list-wrap .contact-list::after{display: none;}
+    .contact-item .icon{margin-right: 14px; min-width: 15px;}
+    .contact_section .iframe-wrapper .cta-button{bottom: 25px; top: auto; left: 15px; width: calc(100% - 30px)}
+    .contact_section .iframe-wrapper iframe{height: 334px;}
+    .contact_section .iframe-wrapper{border-radius: 30px;}
+}
+/*-------------------------------------------------
+
+contact_section end
+
+-------------------------------------------------*/
 
 
 

@@ -45,9 +45,12 @@ if ($auto) {
 
                                 <div class="box-12 box-md-7">
                                     <div class="program-card">
-                                        <div class="image-wrapper">
-                                            <a href="<?php echo $permalink ?>"><img src="<?php echo $featured_image ?>" alt="<?php echo $title ?>"></a>
-                                        </div>
+                                        <?php if (!empty($featured_image)): ?>
+                                            <div class="image-wrapper">
+                                                <a href="<?php echo $permalink ?>"><img src="<?php echo $featured_image ?>" alt="<?php echo $title ?>"></a>
+                                            </div>
+                                        <?php endif; ?>
+
                                         <a href="<?php echo $permalink ?>">
                                             <h3 class="title-head"><?php echo $title ?>&nbsp;<i class='fa fa-angle-right icon-right'></i></h3>
                                         </a>
